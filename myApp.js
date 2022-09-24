@@ -1,6 +1,6 @@
 let express = require('express');
 let app = express();
-require('dotenv').config();
+// require('dotenv').config();
 
 
 app.use(function(req, res, next){
@@ -10,15 +10,13 @@ app.use(function(req, res, next){
 
 
 
-
 // challenge 4 
 app.use('/public',express.static(__dirname + '/public'))
 
 
-
 // challenge 3
 app.get('/', 
-    function middleware(req, res)
+    function(req, res)
     {
         absolutePath = __dirname +  '/views/index.html'
         res.sendFile(absolutePath);
